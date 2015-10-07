@@ -1,12 +1,6 @@
 # iOS Development Guide
 
-This development guide outlines the standards and the best practices
-that are adopted by the iOS team at 2359 Media.
-
-This is the first draft of the guide. We are eager for the feedback from
-our developers. Please feel free to create
-[issues](https://github.com/2359media/ios-dev-guide/issues) for any
-suggestions.
+This is the first draft of the guide.
 
 ## Table of Contents
 
@@ -45,19 +39,15 @@ suggestions.
 This guide should be considered as rules for first timers, but
 guidelines for experienced developers.
 
-## Objective-C Coding Conventions
+## Swift Coding Conventions
 
-Follow these two style guides:
-
-* [NYTimes Objective-C Style Guide](https://github.com/NYTimes/objective-c-style-guide)
-* [2359media fork of GitHub Objective-C Conventions](https://github.com/2359media/objective-c-conventions)
+Follow the Style_Guide document.
 
 ## Project Technical Conventions
 
 ### Xcode
 
-Always use the most recent release version of Xcode. At the time of
-writing, the lastest version is Xcode 5. You can download it from [Mac
+Always use the most recent release version of Xcode. You can download it from [Mac
 App Store](https://itunes.apple.com/en/app/xcode/id497799835?mt=12) or
 at [Apple developer center](https://developer.apple.com/downloads).
 
@@ -125,15 +115,10 @@ local folder.
 
 ### Groups Structure in Project Navigator
 
-We recommend the project group structure as shown in the following
-screenshots.
-
-![Groups Structure in Project Navigator](http://d.pr/i/FXn3/5r31W9wA+)
-
-Assuming *MyApp* is the project name, we follow these conventions:
+Assuming *MyApp* is the project name, we recommend following these conventions:
 
 * Only 4 groups at the top level: **MyApp**, **MyAppTests**,
-  **Frameworks** and **Products**.
+  **Frameworks**, **Products** and **Pods**.
 * `AppDelegate` should be in the root level of **MyApp**, not inside
   any of its subgroups.
 * **MyApp** has 8 subgroups:
@@ -141,7 +126,7 @@ Assuming *MyApp* is the project name, we follow these conventions:
     * __Models__: all model classes, including Core Data classes and
       `xcdatamodeld` file
     * __Views__: all custom views, e.g. custom table view cells
-    * __controllers__: all view controllers go here
+    * __Controllers__: all view controllers go here
     * __Managers__: other controller-like classes that are not view
       controllers, for example, a http client class that handles all the
       API calls
@@ -170,7 +155,7 @@ build, production build or App Store build.
     that **App Store** is created by duplicating **Release**
     configuration.
 
-    ![Create Build Configurations](http://d.pr/i/FvLJ/2w0NKNJD+)
+    ![Create Build Configurations](./images/release_configurations.png)
 
 2.  Add User-Defined Build Settings.
 
@@ -179,13 +164,13 @@ build, production build or App Store build.
     Bundle ID, icon names or Facebook App ID for different Build
     Configurations.
 
-  ![Add User-Defined Settings](http://d.pr/i/Qnw9/XW0PMDHF+)
+  ![Add User-Defined Settings](./images/user_defined.png)
 
     These settings will be used in Info.plist. If the User-Defined
     Setting is `FACEBOOK_APP_ID`, you use it in Info.plist with
     `${FACEBOOK_APP_ID}`.
 
-  ![Use User-Defined Settings in Info.plist](http://d.pr/i/ckeH/96uoJ9Ov+)
+  ![Use User-Defined Settings in Info.plist](./images/custom_props.png)
 
 3.  Create Schemes with Build Configurations.
 
@@ -195,18 +180,18 @@ build, production build or App Store build.
     Note that these schemes should be marked "Shared", so that they will
     be added in the Git repository.
 
-  ![3 Schemes](http://d.pr/i/nrhZ/5dfwYlsf+)
+  ![3 Schemes](./images/schemes.png)
 
     **MyAppStaging** Scheme uses **Debug Staging** and **Release
     Staging**.
 
-  ![MyAppStaging Scheme](http://d.pr/i/cxrL/4ETSVjbO+)
+  ![MyAppStaging Scheme](./images/configure_releases.png)
 
      Similarly, **MyAppProduction** Scheme uses **Debug** and
      **Release**, and **MyAppAppStore** Scheme uses only **App Store**.
      It's summarized in the followed table.
 
-    <img src="http://d.pr/i/9aoY/42ZCSw5m+" alt="Schemes with Build Configurations" style="width: 400px;"/>
+    <img src="./images/summary_table.png" alt="Schemes with Build Configurations" style="width: 400px;"/>
 
 After we have Schemes, we can, for example, switch to staging
 build by easily selecting **MyAppStaging** Scheme. Bundle ID, Facebook
@@ -215,16 +200,16 @@ App ID and app icon will be changed automatically.
 In order to change the Base URL of API server for staging or production,
 we can implement a function that returns the correct URL based on Bundle
 ID. For example, the following function returns the staging Base URL if
-the Bundle ID has a prefix of `com.2359media`.
+the Bundle ID has a prefix of `com.example`.
 
 ```objective-c
 NSString * MDABaseURL()
 {
-    if ([[[NSBundle mainBundle] bundleIdentifier] hasPrefix:@"com.2359media"]) {
-        return @"http://myapp-staging.2359media.net";
+    if ([[[NSBundle mainBundle] bundleIdentifier] hasPrefix:@"com.example"]) {
+        return @"http://myapp-staging.example.net";
     }
     else {
-        return @"http://myapp.2359media.net";
+        return @"http://myapp.example.net";
     }
 }
 ```
