@@ -2,9 +2,6 @@
 //  KIF+SwiftExtension.swift
 //  iOS-Template
 //
-//  Created by Никита Фомин on 15.03.15.
-//  Copyright (c) 2015 Flatstack. All rights reserved.
-//
 
 import KIF
 
