@@ -49,7 +49,7 @@ To rename project you should:
 * Change bundle id for all schemes in project build settings.
 
 #### Rename workspace:
-* Simple rename ```Swift-Base.xcworkspace``` with new project name.
+* Simple rename ```iOS-Template.xcworkspace``` with new project name.
 
 ### Configure mogenerator
 * Go to Build Rules.
@@ -71,6 +71,10 @@ pod install
 * Create organization in Fabric/Crashlytics.
 * Add applications to this organization for all schemes.
 
+### Rename .xcdatamodeld
+* Rename CoreData/iOS-Template.xcdatamodel
+
+
 ### Edit README.md
 * Edit ```README.md```.
 
@@ -80,15 +84,6 @@ cd Path/To/Project
 git init
 git add --all
 git commit -m "Initial commit"
-git remote add origin git@github.com:fs/some-git-repository.git
+git remote add origin git@github.com:user/some-git-repository.git
 git push origin master
 ```
-
-## Credits
-
-iOS Base is maintained by [Nikita Fomin](http://github.com/nikitafomin), [Sergey Nikolaev](https://github.com/NikolaevSergey) and [Vladimir Goncharov](https://github.com/VladimirGoncharov).
-It was written by [Flatstack](http://www.flatstack.com) with the help of our
-[contributors](http://github.com/fs/ios-base/contributors).
-
-
-[![Flatstack](https://avatars0.githubusercontent.com/u/15136?v=2&s=200)](http://www.flatstack.com)
