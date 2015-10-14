@@ -2,6 +2,16 @@
 
 ## Contributor Workflow
 
+### Branching Strategy and Work Flow
+
+-   'develop' should always be in a compiling/working state, containing the most current completed features
+-   'master' should contain only releases (e.g. build from here for app store submission)
+-   'release/some_release_name' should contain releases in-progress (bugfixes only)
+-   'feature/some_feature_name' is where most work should take place
+-   'hotfix/some_hotfix_name is where we fix critical bugs on code that has been released (in master)
+
+Feature branches are the only branches that can be in an indeterminate state, though I avoid intentionally checking in code that doesn't build.  All other branches should build and run cleanly.
+
 ### Fork the Repo and Setup Upstream
 
 These steps only need to be done once.

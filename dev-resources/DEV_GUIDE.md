@@ -32,6 +32,7 @@ This is the first draft of the guide.
     * [UIAlertView and UIActionSheet (Block-based wrappers)](#uialertview-and-uiactionsheet-block-based-wrappers)
 * [Git](#git)
     * [Pull Request](#pull-request)
+* [Version Numbers](#version-numbers)
 * [References](#references)
 
 ## Why This Is Required
@@ -460,6 +461,14 @@ submits their changes through pull requests.
 
 [using-pr]: https://help.github.com/articles/using-pull-requests
 [pr-workflow]: https://github.com/2359media/ios-dev-guide/blob/master/Pull%20Request%20Workflow.md
+
+## Version Numbers
+
+Please use the following convention:
+
+    <major>.<minor>.<update/bug fix>.<build>
+
+The build number should increment with each build, it never resets. A Beta or pre-release application has the following 0.9.0.12
 
 ## References
 
