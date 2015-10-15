@@ -20,16 +20,24 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Crashlytics (3.3.4)
+  - Fabric (1.5.5):
+    - Fabric/Base (= 1.5.5)
+  - Fabric/Base (1.5.5)
   - KIF (3.3.0):
     - KIF/Core (= 3.3.0)
   - KIF/Core (3.3.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6)
+  - Crashlytics
+  - Fabric
   - KIF (~> 3.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  Crashlytics: 41c082440d2e14da444186fff65e79c0b4b35d4c
+  Fabric: 190bf1a6eb65f7500de1347d027d2e59a7e53db1
   KIF: 0a82046d06f3648799cac522d2d0f7934214caac
 
 COCOAPODS: 0.38.2

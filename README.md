@@ -68,6 +68,9 @@ pod install
 
 ### Configure Fabric/Crashlytics
 * Check bundle id in project build settings for all schemes.
+* Install native Fabric app.
+* Follow the provided steps on the Fabric app
+* Be sure to set SBKeyAPIKeyCrashlitycs in Constants.swift and to add the Run Script.
 * Create organization in Fabric/Crashlytics.
 * Add applications to this organization for all schemes.
 

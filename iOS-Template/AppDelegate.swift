@@ -5,6 +5,7 @@
 
 import UIKit
 import CoreData
+import Fabric
 import Crashlytics
 
 @UIApplicationMain
@@ -32,16 +33,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         */
         
         //setting Crashlytics
-        /*
-        if DEBUG == 1
-        {
-            println("Crashlytics is disabled in DEBUG")
-        }
-        else
-        {
-            Crashlytics.startWithAPIKey(kAPIKeyCrashlitycs)
-        }
-        */
+        
+//        if (DEBUG == 1)
+//        {
+//            println("Crashlytics is disabled in DEBUG")
+//        }
+//        else
+//        {
+//            Crashlytics.startWithAPIKey(SBKeyAPIKeyCrashlitycs)
+//        }
+        
         
         return true
     }

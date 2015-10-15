@@ -2,6 +2,8 @@ platform :ios, '7.1'
 source 'https://github.com/CocoaPods/Specs.git'
 
 pod 'AFNetworking', '~> 2.6'
+pod 'Fabric'
+pod 'Crashlytics'
 #pod 'SDWebImage', '~> 3.7'
 #pod 'NSDate-Extensions'
 #pod 'MagicalRecord'

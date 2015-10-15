@@ -16,7 +16,6 @@
 		218C64B81BA078BA00EEEDF1 /* iOS-Template.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 218C64B61BA078BA00EEEDF1 /* iOS-Template.xcdatamodeld */; };
 		218C64C01BA07DDE00EEEDF1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 218C64BD1BA07DDE00EEEDF1 /* Localizable.strings */; };
 		218E3BEA1A8CD5250078686F /* iOS-TemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218E3BE91A8CD5250078686F /* iOS-TemplateTests.swift */; };
-		21B3D1A119E6E2D700EF0D52 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21B3D1A019E6E2D700EF0D52 /* Crashlytics.framework */; };
 		21DB301519DD2289003A418D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB301419DD2289003A418D /* AppDelegate.swift */; };
 		21DB301F19DD2289003A418D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21DB301E19DD2289003A418D /* Images.xcassets */; };
 		21DB304919DD2D6D003A418D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB304819DD2D6D003A418D /* Constants.swift */; };
@@ -87,7 +86,6 @@
 		218C64C21BA07E1F00EEEDF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		218C64C31BA07E4300EEEDF1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		218E3BE91A8CD5250078686F /* iOS-TemplateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "iOS-TemplateTests.swift"; sourceTree = "<group>"; };
-		21B3D1A019E6E2D700EF0D52 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		21C9F2DF19E833300084D18D /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		21DB300F19DD2289003A418D /* iOS-Template.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Template.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		21DB301319DD2289003A418D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				213B89BF19F01A1E005D3749 /* CoreGraphics.framework in Frameworks */,
-				21B3D1A119E6E2D700EF0D52 /* Crashlytics.framework in Frameworks */,
 				19187C2D050A5DF3CD860B30 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,7 +259,6 @@
 				213B89BE19F01A1E005D3749 /* CoreGraphics.framework */,
 				21513BBD19EBCBFA00EE6273 /* MediaPlayer.framework */,
 				21C9F2DF19E833300084D18D /* AVFoundation.framework */,
-				21B3D1A019E6E2D700EF0D52 /* Crashlytics.framework */,
 				189D28268E0409B4010FFB6E /* libPods.a */,
 				B0B9E5B6E527C03536F2EDB1 /* libPods-iOS-TemplateTests.a */,
 			);
@@ -492,7 +488,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./Crashlytics.framework/run 6d91dfaf0a36cfbef5733b3c2d89d2fe7f137706 558b2bcf0efee324101f8bf45f64c08b525998f57a01e3e46d584125bda9afa2";
+			shellScript = "";
 		};
 		593C21C565408951B97706EC /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
