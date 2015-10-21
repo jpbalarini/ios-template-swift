@@ -81,7 +81,7 @@ pod install
 ### Edit README.md
 * Edit ```README.md```.
 
-### Made initial commit and push to remote repository
+### Make initial commit and push to remote repository
 ```sh
 cd Path/To/Project
 git init
