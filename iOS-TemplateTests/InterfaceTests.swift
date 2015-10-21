@@ -5,7 +5,6 @@
 
 import UIKit
 import XCTest
-import KIF
 
 class InterfaceTests: KIFTestCase {
     

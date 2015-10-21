@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19187C2D050A5DF3CD860B30 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 189D28268E0409B4010FFB6E /* libPods.a */; };
 		194478461AAF8FA500A34744 /* InterfaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194478451AAF8FA500A34744 /* InterfaceTests.swift */; };
 		19D856BE1AB5E3AE0014C459 /* KIF+SwiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D856BD1AB5E3AE0014C459 /* KIF+SwiftExtension.swift */; };
 		2124DFA01A8DF48000422313 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2124DF9F1A8DF48000422313 /* ViewController.swift */; };
@@ -19,7 +18,8 @@
 		21DB301519DD2289003A418D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB301419DD2289003A418D /* AppDelegate.swift */; };
 		21DB301F19DD2289003A418D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21DB301E19DD2289003A418D /* Images.xcassets */; };
 		21DB304919DD2D6D003A418D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB304819DD2D6D003A418D /* Constants.swift */; };
-		AB2B92C5AD32994DD7EBD58A /* libPods-iOS-TemplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B9E5B6E527C03536F2EDB1 /* libPods-iOS-TemplateTests.a */; };
+		C4B6DA947FEAF6110E6F4A32 /* libPods-iOS-TemplateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F34E5E6E80703AA951A0B6CD /* libPods-iOS-TemplateTests.a */; };
+		DD282C2E106F911A17AD1C0B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2EB261CA2513360CF43BD77 /* libPods.a */; };
 		E7566D9F1A1F85CB00DE3010 /* Main_Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7566DA11A1F85CB00DE3010 /* Main_Storyboard.storyboard */; };
 		ECEC8F951BC5B15300826FED /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEC8F941BC5B15300826FED /* APIManager.swift */; settings = {ASSET_TAGS = (); }; };
 		ECEC8F971BC5B31100826FED /* FSHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECEC8F961BC5B31100826FED /* FSHelpers.swift */; settings = {ASSET_TAGS = (); }; };
@@ -70,7 +70,6 @@
 /* Begin PBXFileReference section */
 		0B854B6014D9DDA9A596C69D /* Pods-iOS-TemplateTests.debug staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.debug staging.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.debug staging.xcconfig"; sourceTree = "<group>"; };
 		11C141781AB1950B00ED67DA /* BridgeHeaderTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeHeaderTests.h; sourceTree = "<group>"; };
-		189D28268E0409B4010FFB6E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		194478451AAF8FA500A34744 /* InterfaceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceTests.swift; sourceTree = "<group>"; };
 		19D856BD1AB5E3AE0014C459 /* KIF+SwiftExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "KIF+SwiftExtension.swift"; sourceTree = "<group>"; };
 		19D856C11AB5ED2E0014C459 /* build.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; name = build.sh; path = Scripts/build.sh; sourceTree = "<group>"; };
@@ -101,7 +100,6 @@
 		9B62AFD8847834B4FE5064BD /* Pods-iOS-TemplateTests.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.appstore.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.appstore.xcconfig"; sourceTree = "<group>"; };
 		A9F31A1C12206DF94283F801 /* Pods-iOS-TemplateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS-TemplateTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOS-TemplateTests/Pods-iOS-TemplateTests.release.xcconfig"; sourceTree = "<group>"; };
 		AB848BC11E409F9A85D785F1 /* Pods.debug staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods.debug staging.xcconfig"; path = "Pods/Target Support Files/Pods/Pods.debug staging.xcconfig"; sourceTree = "<group>"; };
-		B0B9E5B6E527C03536F2EDB1 /* libPods-iOS-TemplateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS-TemplateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD792995EA1B8C035C9A51B2 /* Pods.release staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods.release staging.xcconfig"; path = "Pods/Target Support Files/Pods/Pods.release staging.xcconfig"; sourceTree = "<group>"; };
 		E7566DA01A1F85CB00DE3010 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_Storyboard.storyboard; sourceTree = "<group>"; };
 		ECEC8F941BC5B15300826FED /* APIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
@@ -116,6 +114,8 @@
 		ECEC8FA01BC5B33A00826FED /* FS+UITextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FS+UITextView.swift"; sourceTree = "<group>"; };
 		ECEC8FA11BC5B33A00826FED /* FS+UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FS+UIView.swift"; sourceTree = "<group>"; };
 		EEA78E0524AC4DD61E5DBF9C /* Pods.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.appstore.xcconfig; path = "Pods/Target Support Files/Pods/Pods.appstore.xcconfig"; sourceTree = "<group>"; };
+		F2EB261CA2513360CF43BD77 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F34E5E6E80703AA951A0B6CD /* libPods-iOS-TemplateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOS-TemplateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF3C7DA238EA7C51D060C78B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,7 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				213B89BF19F01A1E005D3749 /* CoreGraphics.framework in Frameworks */,
-				19187C2D050A5DF3CD860B30 /* libPods.a in Frameworks */,
+				DD282C2E106F911A17AD1C0B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB2B92C5AD32994DD7EBD58A /* libPods-iOS-TemplateTests.a in Frameworks */,
+				C4B6DA947FEAF6110E6F4A32 /* libPods-iOS-TemplateTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,8 +259,8 @@
 				213B89BE19F01A1E005D3749 /* CoreGraphics.framework */,
 				21513BBD19EBCBFA00EE6273 /* MediaPlayer.framework */,
 				21C9F2DF19E833300084D18D /* AVFoundation.framework */,
-				189D28268E0409B4010FFB6E /* libPods.a */,
-				B0B9E5B6E527C03536F2EDB1 /* libPods-iOS-TemplateTests.a */,
+				F2EB261CA2513360CF43BD77 /* libPods.a */,
+				F34E5E6E80703AA951A0B6CD /* libPods-iOS-TemplateTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -698,7 +698,7 @@
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "iOS-Template/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -734,7 +734,7 @@
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "iOS-Template/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -852,7 +852,7 @@
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "iOS-Template/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -948,7 +948,7 @@
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "iOS-Template/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1039,7 +1039,7 @@
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				INFOPLIST_FILE = "iOS-Template/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",

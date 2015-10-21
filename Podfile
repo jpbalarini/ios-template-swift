@@ -1,5 +1,7 @@
-platform :ios, '7.1'
 source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+
+#use_frameworks!
 
 pod 'AFNetworking', '~> 2.6'
 pod 'Fabric'
@@ -15,5 +17,5 @@ pod 'Crashlytics'
 #pod 'NSDate-Extensions'
 
 target 'iOS-TemplateTests', :exclusive => true do
-    pod 'KIF', '~> 3.2', :configurations => ['Debug', 'Debug Staging']
+    pod 'KIF'
 end
