@@ -412,7 +412,7 @@
 				TargetAttributes = {
 					21DB300E19DD2289003A418D = {
 						CreatedOnToolsVersion = 6.0.1;
-						DevelopmentTeam = UTXK29TA3W;
+						DevelopmentTeam = 5U87XMD88S;
 					};
 					21DB302619DD2289003A418D = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -725,7 +725,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				BUNDLE_DISPLAY_NAME = "iOS-Template";
 				BUNDLE_ID = "com.example.iOS-Template";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -939,7 +939,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				BUNDLE_DISPLAY_NAME = "iOS-Template Staging";
 				BUNDLE_ID = "com.example.iOS-Template.staging";
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
