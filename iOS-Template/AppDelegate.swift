@@ -93,12 +93,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func requestForRemoteNotifications () {
-        if #available(iOS 8.0, *) {
-            UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [UIUserNotificationType.Alert, UIUserNotificationType.Sound, UIUserNotificationType.Badge], categories: nil))
-            UIApplication.sharedApplication().registerForRemoteNotifications()
-        } else {
-            UIApplication.sharedApplication().registerForRemoteNotificationTypes([UIRemoteNotificationType.Alert, UIRemoteNotificationType.Sound, UIRemoteNotificationType.Badge])
-        }
+        UIApplication.sharedApplication().registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [UIUserNotificationType.Alert, UIUserNotificationType.Sound, UIUserNotificationType.Badge], categories: nil))
+        UIApplication.sharedApplication().registerForRemoteNotifications()
     }
 }
 
