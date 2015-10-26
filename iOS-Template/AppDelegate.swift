@@ -43,7 +43,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            Crashlytics.startWithAPIKey(SBKeyAPIKeyCrashlitycs)
 //        }
         
-        
         return true
     }
 
