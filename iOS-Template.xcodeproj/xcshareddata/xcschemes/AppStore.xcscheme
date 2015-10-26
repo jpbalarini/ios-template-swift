@@ -111,5 +111,14 @@
    <ArchiveAction
       buildConfiguration = "AppStore"
       revealArchiveInOrganizer = "YES">
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "&quot;${PODS_ROOT}/Crashlytics/Crashlytics.framework/submit&quot; a518630230e7d2c7d555574a684bc930444b55e4 3cf5d0a36a970296f493175a6d1ff704bc4f3b38fd9606a30178f9594aef6003 -emails juanpablo@fsstudio.com">
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
    </ArchiveAction>
 </Scheme>
