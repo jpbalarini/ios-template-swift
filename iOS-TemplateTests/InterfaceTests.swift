@@ -25,7 +25,7 @@ class InterfaceTests: KIFTestCase {
     }
     
     func testExample() {
-        tester().waitForViewWithAccessibilityLabel("Hello Worsssld!")
+        tester().waitForViewWithAccessibilityLabel("Hello World!")
         tester().tapViewWithAccessibilityLabel("Tap to show alert")
         tester().tapViewWithAccessibilityLabel("OK")
         //tester().waitForTimeInterval(1)
