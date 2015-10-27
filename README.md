@@ -28,7 +28,7 @@ git remote add origin git@github.com:user/some-git-repository.git
 To rename the project you should:
 
 #### Change project name:
-# Run the .rename_project.sh script. Enter the new project name
+* Run the .rename_project.sh script. Enter the new project name
 * Open the .workspace project
 * In the Project Navigator on the left side, click twice slowly on the project name and it will become editable. Type the new name. A dialog will appear listing all the items Xcode suggests to be renamed.
 * Click Rename.
