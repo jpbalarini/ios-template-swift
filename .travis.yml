@@ -21,8 +21,6 @@ notifications:
             - $API_TOKEN@ios-base
     email:
         recipients:
-            - juanpablo@fsstudio.com
-            - matt@fsstudio.com
             # - other@example.com
         on_success: change # [always|never|change] # default: change
         on_failure: always # [always|never|change] # default: always
