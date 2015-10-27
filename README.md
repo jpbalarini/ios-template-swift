@@ -76,6 +76,7 @@ pod install
 * Be sure to set SBKeyAPIKeyCrashlitycs in Constants.swift and to add the Run Script.
 * Create organization in Fabric/Crashlytics.
 * Add applications to this organization for all schemes.
+* Uncomment the Crashlytics.startWithAPIKey(SBKeyAPIKeyCrashlitycs) to register the app
 
 ### Rename .xcdatamodeld
 * Rename CoreData/iOS-Template.xcdatamodel
