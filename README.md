@@ -25,9 +25,11 @@ git remote add origin git@github.com:user/some-git-repository.git
 ```
 
 ### Rename project
-To rename project you should:
+To rename the project you should:
 
 #### Change project name:
+# Run the .rename_project.sh script. Enter the new project name
+* Open the .workspace project
 * In the Project Navigator on the left side, click twice slowly on the project name and it will become editable. Type the new name. A dialog will appear listing all the items Xcode suggests to be renamed.
 * Click Rename.
 
@@ -36,20 +38,21 @@ To rename project you should:
 * Search ```iOS-Template``` in project.
 * Replace any occurrence of the iOS-Template name with the new project name.
 
-#### Change folders names:
-* Go to the project directory and rename folders ```iOS-Template```, ```iOS-TemplateTests```.
-* Rename ```iOS-TemplateTests.swift``` in folder for test classes.
-
-#### Change .xcodeproj file:
-* Right click the project bundle ```.xcodeproj``` file and select “Show Package Contents” from the context menu. Open the ```.pbxproj``` file with any text editor.
-* Search and replace any occurrence of the ```swift-base``` with the new project name.
-* Save the file.
-
 #### Change bundle id:
 * Change bundle id for all schemes in project build settings.
 
-#### Rename workspace:
-* Simple rename ```iOS-Template.xcworkspace``` with new project name.
+#### Change workspace reference:
+* Right click the project bundle .workspace file and select “Show Package Contents” from the context menu. Open the .xcworkspacedata file with any text editor.
+* Change the absolute route:
+
+```
+group:/Users/something/../ProjectName.xcodeproj
+```
+to a relative path
+
+```
+group:ProjectName.xcodeproj
+```
 
 ### Configure mogenerator
 * Go to Build Rules.
