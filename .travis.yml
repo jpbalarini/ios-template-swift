@@ -10,8 +10,8 @@ before_install:
 install:
 - pod install
 script:
-- ./scripts/build.sh
-- ./scripts/test.sh
+- ./iOS-Template/Scripts/build.sh
+- ./iOS-Template/Scripts/test.sh
 before_script:
 - ./scripts/travis/add-key.sh
 after_script:
