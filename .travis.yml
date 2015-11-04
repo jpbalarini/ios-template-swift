@@ -1,26 +1,34 @@
 language: objective-c
-
 xcode_workspace: iOS-Template.xcworkspace
 xcode_scheme: Staging
 osx_image: xcode7
-
 before_install:
-    - export LANG=en_US.UTF-8
-    - sudo gem install cocoapods --no-document
-
+- export LANG=en_US.UTF-8
+- sudo gem install cocoapods --no-document
 install:
-    - pod install
-
+- pod install
 script:
-    - ./iOS-Template/Scripts/build.sh
-    - ./iOS-Template/Scripts/test.sh
-
+- ./scripts/build.sh
+- ./scripts/test.sh
+before_script:
+- ./scripts/travis/add-key.sh
+after_script:
+- ./scripts/travis/remove-key.sh
+after_success:
+- ./scripts/travis/fabric.sh
+env:
+  global:
+  - APPNAME="iOS-Template"
+  - 'DEVELOPER_NAME="iPhone Distribution: Juan Balarini (5U87XMD88S)"'
+  - PROFILE_UUID=81e6a777-675d-4938-9c04-05615042bb88
+  - secure: KaOXbZ5voxh1GzBnjs5Gi2XDbD3xShK+nouTNq79vBr6tAG3xc2T/TuvQOGKdit3CMClqsFPB3z3fOGiJvaw9YwFBdWQRTGAJaYE0XXRPEhtAtl5btXoS61GgB34xVoN2p45W1+hndog/sV/Q+W0/Qp3IixnIx2yky08Q61pWZ/JBVmDaJUpxu92M8NdxdsQV99euZ44mf9yNLYO/s8QH6sYFJX65CLP3FYITm1STRxDIu1toBXlK1OpKsFPzFAhgkhDA5XHoHKulQbuFZIidlOz0fsKlpIOZn7WIRcpTGDrNZ5xJ8FbwcO/3GHKd0Q6qxmIele5cOKNKt13ffQzBq30U6v8FU8fsx/reTcBvSN5qpa4ePbCxHrfEW7NWtr+taGGo8dOp1MB7uC5jiw5nh5ezwOPJJwa3Vy4E4UdnPBRQJ0hseNCm1B2ttau659h3snCm1H21kgcHQYzCYsGEJtXVgGEM4zhG3hJy5lcEsrMJCJ2vEA4473tkijW+wTuBDpJ1FxTXY6eb7b0cKYeAiIipNFmqDA81HElv2RTQTZuFxM87HpFTYUZcaFUNZicN6tAKuA5/w6cL0adO36yCwOMtBeikSpJuvvYP5BFvQRbLHafwyNx0Gd2iNAszhiHLpuxBAQUoqlk9rwZIWQxKLxj9Mp86FFkfRWPtdnKVh0=
+  - secure: D3iZytv7pAzT5Fl5nfACAsQsISRHBxssjOWDVWwxSYBV2FWwBJBb/cVxOqBZ+uUKFDF4mwl11e7D7xaxdPvYZJ+f/vrYFa7/jjmgeWbYBNAK2tyM0lTHkoCDT9avjkuA8h7SEBGy8vj9MsCa+5QiiXuDU92WNFGq7jlWROI5XzYSAB8GsfIfi20fqZm75RJ6U8VsbwoWKNMTycF7wOW763vLYI8PETbqWik1+UFQeMn+AmhCDkNiY2ush8hTfNEbj+rDN7TW2Km3DT+iVS0bA9eg9/Ce62NZE+cX9mSRvoXnHqjR9D6Ai9rwaAPVOOqIGr79v0mPoZUbqpQYTd5nvXT4geSZvnrhKrMdZaFjy8BiUOVoxr9yEQCDnu+P+jbMFh+i4+PiYhZ/2JM8+5VNM1bctSFZylXkcXHrRttT5o9BOSpjt7d1hlMumRoOo0EUk2znr4EUCY8cNrGdfJoOnSg7adC9M5fXU38P9zXJJbxdYqzNCN3/nIMOrYtaTnJ9OXLykkqTXHQbZ+PLsR+25CeBTFbK0aqcNwxZXYs/yRUlNAV4xAb7jupm+V2T3cTGrs3htYS/dYaVqy4rNs64phpKVarx6MDNJFf+7V0SXcfKwrqUGbqnyFjHUmXrSK2+gLxD90bHn8ZOOMRlOY3u/jrL4SsyCqFNUv+M6eHkkrc=
+  - secure: DJkjumANHMT1K1i8h+z+dLVjMPxe6F3GqT6I3qI5baczTvQ3VkB1U1qDu5K7Jx2HdGTafZ+HdTHsWsfXv4wtqfKdCOLLKpjJTcbtKzlWYu6xplMr6DM/hvZEb0DGfMS1stVly05IdzzxiAHiTI1EWqnYJgsOyPO2F+AZo+6ZL7AZBzqL8bhRBPEe2WuDUCaFb6AMx0YiIxKnm8VMf+NPJKEkRF7UD+CZ9m8pT1k5QgEIRBkWoZRGQuNltM9teahDbRsAEWFKXpXN+O2zgEMy1quXM2FtDachNDOQhl5F+Jid6bnEVfr6e3hLATU1abbCQmikG/SuZ/IVgIpoZK6GDGoDN7FCkz+TLjno395tlg8yfa+vEoZsIBeJkRVHHITJJ2bLDOVCN7/8/wwLw2HWEfWJK4D+MrHBkpXhDrhWTHpV7z0K9gPxAignoGjkcNvOqQN6OpnRiVp7vOCp3AGFbIG2dECJC2PsHu/sUXqxveJ2A/shYmWGel2H8TCnfhumlNRpP4KDoGZq8h2GuuPSRQKzWJKJzfpaY/yshl3RtSYe05AzIBhoQxUvOOsZ2LYU9FYbZ0/YY4HrTRaNBYAcIugZSOx35UKgDRHg5LUyxIE9hzHP9RSu6UuhjPd6fjzGMY+vUH4Aq/5l9jWTpIrojnoey1FHLmaOes2eggXRWMM=
 notifications:
-    hipchat:
-        rooms:
-            - $API_TOKEN@ios-base
-    email:
-        recipients:
-            # - other@example.com
-        on_success: change # [always|never|change] # default: change
-        on_failure: always # [always|never|change] # default: always
+  hipchat:
+    rooms:
+    - $API_TOKEN@ios-base
+  email:
+    recipients:
+    on_success: change
+    on_failure: always

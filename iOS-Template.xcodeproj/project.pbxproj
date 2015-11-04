@@ -365,7 +365,7 @@
 				21DB300C19DD2289003A418D /* Frameworks */,
 				21DB300D19DD2289003A418D /* Resources */,
 				094CC2F0EF766D3A54F5369D /* Copy Pods Resources */,
-				21B3D19F19E6E2B700EF0D52 /* ShellScript */,
+				21B3D19F19E6E2B700EF0D52 /* Run Script */,
 			);
 			buildRules = (
 				21DB304B19DD32D9003A418D /* PBXBuildRule */,
@@ -477,13 +477,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		21B3D19F19E6E2B700EF0D52 /* ShellScript */ = {
+		21B3D19F19E6E2B700EF0D52 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
