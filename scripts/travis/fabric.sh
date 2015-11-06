@@ -10,27 +10,17 @@ fi
 
 PROVISIONING_PROFILE="$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_UUID.mobileprovision"
 RELEASE_DATE=`date '+%Y-%m-%d %H:%M:%S'`
-OUTPUTDIR="$PWD/build/Release-iphoneos"
-
-mkdir -p $OUTPUTDIR
-
-LATEST_ARCHIVE_PATH=`find ~/Library/Developer/Xcode/Archives -type d -Btime -60m -name '*.xcarchive' | head -1`
-echo $LATEST_ARCHIVE_PATH
-
-PRODUCT_PATH="$LATEST_ARCHIVE_PATH/Products/Applications/$APPNAME.app"
-DSYM_PATH="$LATEST_ARCHIVE_PATH/dSYMs/$APPNAME.app.dSYM"
-echo $PRODUCT_PATH
-echo $DSYM_PATH
+OUTPUTDIR="/Users/travis/build"
 
 
 echo "********************"
 echo "*     Signing      *"
 echo "********************"
-xcrun -log -sdk iphoneos PackageApplication -v "$PRODUCT_PATH" -o "$OUTPUTDIR/$APPNAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE"
+xcrun -log -sdk iphoneos PackageApplication "$OUTPUTDIR/$APPNAME.app" -o "$OUTPUTDIR/$APPNAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE"
 
 RELEASE_NOTES="Build: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"
 
-zip -r -9 "$OUTPUTDIR/$APPNAME.app.dSYM.zip" "$DSYM_PATH"
+zip -r -9 "$OUTPUTDIR/$APPNAME.app.dSYM.zip" "$OUTPUTDIR/$APPNAME.app.dSYM"
 
 # IPA_SIZE=$(stat -c%s "$OUTPUTDIR/$APPNAME.ipa")
 # echo "IPA $IPA_SIZE"
@@ -48,4 +38,7 @@ echo "********************"
 #   -F distribution_lists='Internal' \
 #   -F notes="$RELEASE_NOTES" -vs
 
+echo "Testing with @"
 ./Pods/Crashlytics/Crashlytics.framework/submit "$API_KEY" "$BUILD_SECRET" -ipaPath "@$OUTPUTDIR/$APPNAME.ipa" -emails jbala87@gmail.com
+echo "Testing without @"
+./Pods/Crashlytics/Crashlytics.framework/submit "$API_KEY" "$BUILD_SECRET" -ipaPath "$OUTPUTDIR/$APPNAME.ipa" -emails jbala87@gmail.com
