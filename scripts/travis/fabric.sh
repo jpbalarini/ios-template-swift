@@ -19,7 +19,7 @@ echo "********************"
 
 BUILD_DIR_CONTENTS="$(ls /Users/travis/build)"
 echo "${BUILD_DIR_CONTENTS}"
-xcrun -log -sdk iphoneos PackageApplication "$OUTPUTDIR/$APPNAME.app" -o "$OUTPUTDIR/$APPNAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE"
+xcrun -log -sdk iphoneos PackageApplication "$OUTPUTDIR/$APPNAME.app" -o "$OUTPUTDIR/$APPNAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE" CODE_SIGN_RESOURCE_RULES_PATH="$(SDKROOT)/ResourceRules.plist"
 
 RELEASE_NOTES="Build: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"
 
