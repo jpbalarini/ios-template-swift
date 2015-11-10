@@ -19,7 +19,7 @@ echo "********************"
 
 BUILD_DIR_CONTENTS="$(ls /Users/travis/build)"
 echo "${BUILD_DIR_CONTENTS}"
-xcrun -verbose -log -sdk iphoneos PackageApplication -v "$OUTPUTDIR/$APPNAME.app" -o "$OUTPUTDIR/$APPNAME.ipa" -embed "$PROVISIONING_PROFILE"
+xcrun -log -sdk iphoneos PackageApplication -v "$OUTPUTDIR/$APPNAME.app" -o "$OUTPUTDIR/$APPNAME.ipa" -embed "$PROVISIONING_PROFILE"
 
 RELEASE_NOTES="Build: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"
 
@@ -41,7 +41,4 @@ echo "********************"
 #   -F distribution_lists='Internal' \
 #   -F notes="$RELEASE_NOTES" -vs
 
-echo "Testing with @"
-./Pods/Crashlytics/Crashlytics.framework/submit "$API_KEY" "$BUILD_SECRET" -ipaPath "@$OUTPUTDIR/$APPNAME.ipa" -emails jbala87@gmail.com
-echo "Testing without @"
-./Pods/Crashlytics/Crashlytics.framework/submit "$API_KEY" "$BUILD_SECRET" -ipaPath "$OUTPUTDIR/$APPNAME.ipa" -emails jbala87@gmail.com
+./Pods/Crashlytics/Crashlytics.framework/submit "$API_KEY" "$BUILD_SECRET" -ipaPath "$OUTPUTDIR/$APPNAME.ipa" -emails jbala87@gmail.com -debug YES
