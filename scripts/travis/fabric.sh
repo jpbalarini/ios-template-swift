@@ -17,10 +17,13 @@ echo "********************"
 echo "*     Signing      *"
 echo "********************"
 
+echo "$(cat /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/PackageApplication)"
+echo "////////"
+
 BUILD_DIR_CONTENTS="$(ls /Users/travis/build)"
 echo "${BUILD_DIR_CONTENTS}"
 # Create IPA
-xcrun -log -sdk iphoneos PackageApplication -v "$OUTPUTDIR/$APPNAME.app" -o "$OUTPUTDIR/$APPNAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE" 'CODE_SIGN_RESOURCE_RULES_PATH=$(SDKROOT)/ResourceRules.plist'
+xcrun -log -sdk iphoneos PackageApplication -v "$OUTPUTDIR/$APPNAME.app" -o "$OUTPUTDIR/$APPNAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE" CODE_SIGN_RESOURCE_RULES_PATH='$(SDKROOT)/ResourceRules.plist'
 
 # # Create an archive
 # xcodebuild -alltargets -configuration Release -scheme 'Production' -archivePath "$OUTPUTDIR/$APPNAME.xcarchive" archive
