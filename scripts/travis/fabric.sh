@@ -23,7 +23,7 @@ echo "${BUILD_DIR_CONTENTS}"
 
 
 # Create an archive
-xcodebuild -alltargets -configuration Release -scheme 'Production' -archivePath "$OUTPUTDIR/$APPNAME.xcarchive" archive
+xcodebuild -alltargets -configuration Release -scheme 'Production' -archivePath "$OUTPUTDIR/$APPNAME.xcarchive" -embed "$PROVISIONING_PROFILE" archive
 # Create the IPA file from the archive
 xcodebuild -exportProvisioningProfile "$PROFILE_UUID" -exportArchive -exportFormat IPA -archivePath "$OUTPUTDIR/$APPNAME.xcarchive" -exportPath "$OUTPUTDIR/$APPNAME.ipa" CODE_SIGN_IDENTITY="$DEVELOPER_NAME"
 
