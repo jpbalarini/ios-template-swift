@@ -17,8 +17,11 @@ echo "********************"
 echo "*     Signing      *"
 echo "********************"
 
-echo "$(cat /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/PackageApplication)"
 echo "////////"
+sed -i -e 's/--preserve-metadata=identifier,entitlements,resource-rules/--preserve-metadata=identifier,entitlements/g' /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/PackageApplication
+sed -i -e 's/\"--sign\",\ $opt{sign},/\"--sign\",\ $opt{sign});/g' /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/PackageApplication
+sed -i -e 's/\"--resource-rules=$destApp\/ResourceRules.plist\");//g' /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/PackageApplication
+echo "$(cat /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/PackageApplication)"
 
 BUILD_DIR_CONTENTS="$(ls /Users/travis/build)"
 echo "${BUILD_DIR_CONTENTS}"
