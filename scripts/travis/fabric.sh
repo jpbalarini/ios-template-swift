@@ -19,7 +19,15 @@ echo "********************"
 
 BUILD_DIR_CONTENTS="$(ls /Users/travis/build)"
 echo "${BUILD_DIR_CONTENTS}"
-xcrun -log -sdk iphoneos PackageApplication -v "$OUTPUTDIR/$APPNAME.app" -o "$OUTPUTDIR/$APPNAME.ipa" -embed "$PROVISIONING_PROFILE"
+# xcrun -log -sdk iphoneos PackageApplication -v "$OUTPUTDIR/$APPNAME.app" -o "$OUTPUTDIR/$APPNAME.ipa" -embed "$PROVISIONING_PROFILE"
+
+
+# Create an archive
+xcodebuild -alltargets -configuration Release -scheme 'Production' -archivePath "$OUTPUTDIR/$APPNAME.xcarchive" archive
+# Create the IPA file from the archive
+xcodebuild -exportProvisioningProfile "$PROFILE_UUID" -exportArchive -exportFormat IPA -archivePath "$OUTPUTDIR/$APPNAME.xcarchive" -exportPath "$OUTPUTDIR/$APPNAME.ipa" CODE_SIGN_IDENTITY="$DEVELOPER_NAME"
+
+
 
 RELEASE_NOTES="Build: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"
 
