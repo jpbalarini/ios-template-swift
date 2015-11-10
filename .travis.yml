@@ -12,7 +12,7 @@ install:
 - pod install
 script:
 - ./iOS-Template/Scripts/build.sh
-- ./iOS-Template/Scripts/test.sh
+# - ./iOS-Template/Scripts/test.sh
 before_script:
 - ./scripts/travis/add-key.sh
 after_script:
