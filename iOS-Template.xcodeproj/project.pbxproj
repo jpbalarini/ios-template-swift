@@ -11,8 +11,6 @@
 		19D856BE1AB5E3AE0014C459 /* KIF+SwiftExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D856BD1AB5E3AE0014C459 /* KIF+SwiftExtension.swift */; };
 		2124DFA01A8DF48000422313 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2124DF9F1A8DF48000422313 /* ViewController.swift */; };
 		213B89BF19F01A1E005D3749 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213B89BE19F01A1E005D3749 /* CoreGraphics.framework */; };
-		2158286D1A91E2F200833BE6 /* mogend.sh in Resources */ = {isa = PBXBuildFile; fileRef = 2158286B1A91E2F200833BE6 /* mogend.sh */; };
-		218C64B81BA078BA00EEEDF1 /* iOS-Template.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 218C64B61BA078BA00EEEDF1 /* iOS-Template.xcdatamodeld */; };
 		218C64C01BA07DDE00EEEDF1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 218C64BD1BA07DDE00EEEDF1 /* Localizable.strings */; };
 		218E3BEA1A8CD5250078686F /* iOS-TemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218E3BE91A8CD5250078686F /* iOS-TemplateTests.swift */; };
 		21DB301519DD2289003A418D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21DB301419DD2289003A418D /* AppDelegate.swift */; };
@@ -447,7 +445,6 @@
 			files = (
 				E7566D9F1A1F85CB00DE3010 /* Main_Storyboard.storyboard in Resources */,
 				218C64C01BA07DDE00EEEDF1 /* Localizable.strings in Resources */,
-				2158286D1A91E2F200833BE6 /* mogend.sh in Resources */,
 				21DB301F19DD2289003A418D /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,7 +543,6 @@
 				ECEC8FA31BC5B33A00826FED /* FS+Dictionary.swift in Sources */,
 				ECEC8F971BC5B31100826FED /* FSHelpers.swift in Sources */,
 				ECEC8FAA1BC5B33A00826FED /* FS+UIView.swift in Sources */,
-				218C64B81BA078BA00EEEDF1 /* iOS-Template.xcdatamodeld in Sources */,
 				ECEC8FA51BC5B33A00826FED /* FS+NSDate.swift in Sources */,
 				ECEC8FA21BC5B33A00826FED /* FS+Array.swift in Sources */,
 				ECEC8FA61BC5B33A00826FED /* FS+String.swift in Sources */,
