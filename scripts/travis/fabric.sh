@@ -8,7 +8,7 @@ if [[ "$TRAVIS_BRANCH" != "master" ]]; then
   exit 0
 fi
 
-PROVISIONING_PROFILE="$HOME/Library/MobileDevice/Provisioning Profiles/TestDistributionProfileFS.mobileprovision"
+PROVISIONING_PROFILE="$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_UUID.mobileprovision"
 RELEASE_DATE=`date '+%Y-%m-%d %H:%M:%S'`
 OUTPUTDIR="/Users/travis/build"
 
@@ -54,4 +54,13 @@ echo "********************"
 #   -F distribution_lists='Internal' \
 #   -F notes="$RELEASE_NOTES" -vs
 
-./Pods/Crashlytics/Crashlytics.framework/submit "$API_KEY" "$BUILD_SECRET" -ipaPath "$OUTPUTDIR/$APPNAME.ipa" -emails jbala87@gmail.com -debug YES
+# ./Pods/Crashlytics/Crashlytics.framework/submit "$API_KEY" "$BUILD_SECRET" -ipaPath "$OUTPUTDIR/$APPNAME.ipa" -emails jbala87@gmail.com -debug YES
+
+curl https://rink.hockeyapp.net/api/2/apps/$HOCKEY_APP_ID/app_versions \
+  -F status="2" \
+  -F notify="0" \
+  -F notes="$RELEASE_NOTES" \
+  -F notes_type="0" \
+  -F ipa="@$OUTPUTDIR/$APP_NAME.ipa" \
+  -F dsym="@$OUTPUTDIR/$APP_NAME.app.dSYM.zip" \
+  -H "X-HockeyAppToken: $HOCKEY_APP_TOKEN"

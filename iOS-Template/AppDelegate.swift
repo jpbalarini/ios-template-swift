@@ -43,6 +43,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            Crashlytics.startWithAPIKey(SBKeyAPIKeyCrashlitycs)
 //        }
         
+        BITHockeyManager.sharedHockeyManager().configureWithIdentifier("0fd7fadd769c493f9c48e2ec7b2abade")
+        // Do some additional configuration if needed here
+        BITHockeyManager.sharedHockeyManager().startManager()
+        BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()
+        
         return true
     }
 
