@@ -56,11 +56,14 @@ echo "********************"
 
 # ./Pods/Crashlytics/Crashlytics.framework/submit "$API_KEY" "$BUILD_SECRET" -ipaPath "$OUTPUTDIR/$APPNAME.ipa" -emails jbala87@gmail.com -debug YES
 
-curl https://rink.hockeyapp.net/api/2/apps/$HOCKEY_APP_ID/app_versions \
-  -F status="2" \
-  -F notify="0" \
-  -F notes="$RELEASE_NOTES" \
-  -F notes_type="0" \
-  -F ipa="$OUTPUTDIR/$APP_NAME.ipa" \
-  -F dsym="$OUTPUTDIR/$APP_NAME.app.dSYM.zip" \
-  -H "X-HockeyAppToken: $HOCKEY_APP_TOKEN"
+# curl https://rink.hockeyapp.net/api/2/apps/$HOCKEY_APP_ID/app_versions \
+#   -F status="2" \
+#   -F notify="0" \
+#   -F notes="$RELEASE_NOTES" \
+#   -F notes_type="0" \
+#   -F ipa="@/Users/travis/build/iOS-Template.ipa" \
+#   -F dsym="@/Users/travis/build/iOS-Template.app.dSYM.zip" \
+#   -H "X-HockeyAppToken: $HOCKEY_APP_TOKEN"
+
+response=$(curl https://rink.hockeyapp.net/api/2/apps/$HOCKEY_APP_ID/app_versions -F status="2" -F notify="0" -F notes="$RELEASE_NOTES" -F notes_type="0" -F ipa="@/Users/travis/build/iOS-Template.ipa" -F dsym="@/Users/travis/build/iOS-Template.app.dSYM.zip" -H "X-HockeyAppToken: $HOCKEY_APP_TOKEN")
+echo $response
