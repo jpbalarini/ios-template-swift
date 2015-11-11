@@ -8,7 +8,7 @@ if [[ "$TRAVIS_BRANCH" != "master" ]]; then
   exit 0
 fi
 
-PROVISIONING_PROFILE="$HOME/Library/MobileDevice/Provisioning Profiles/TestDistributionProfileFS.mobileprovision"
+PROVISIONING_PROFILE="$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_UUID.mobileprovision"
 RELEASE_DATE=`date '+%Y-%m-%d %H:%M:%S'`
 OUTPUTDIR="/Users/travis/build"
 
