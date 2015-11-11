@@ -65,5 +65,6 @@ echo "********************"
 #   -F dsym="@/Users/travis/build/iOS-Template.app.dSYM.zip" \
 #   -H "X-HockeyAppToken: $HOCKEY_APP_TOKEN"
 
+# Hockeyapp upload
 response=$(curl https://rink.hockeyapp.net/api/2/apps/$HOCKEY_APP_ID/app_versions -F status="2" -F notify="0" -F notes="$RELEASE_NOTES" -F notes_type="0" -F ipa="@/Users/travis/build/iOS-Template.ipa" -F dsym="@/Users/travis/build/iOS-Template.app.dSYM.zip" -H "X-HockeyAppToken: $HOCKEY_APP_TOKEN")
 echo $response
