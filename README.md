@@ -9,7 +9,7 @@ To setup project please follow the next steps:
  2. [Rename project](#rename-project).
  3. [Configure mogenerator](#configure-mogenerator).
  4. [Configure CocoaPods](#configure-cocoapods).
- 5. [Configure Fabrick/Crashlytics](#configure-fabric-crashlytics).
+ 5. [Configure Fabric/Crashlytics](#configure-fabric-crashlytics).
  6. [Edit README.md](#edit-readme-md).
  7. [Commit and push to repository](#made-initial-commit-and-push-to-remote-repository).
 
@@ -77,6 +77,29 @@ pod install
 * Create organization in Fabric/Crashlytics.
 * Add applications to this organization for all schemes.
 * Uncomment the Crashlytics.startWithAPIKey(SBKeyAPIKeyCrashlitycs) to register the app
+
+### Configure HockeyApp
+* Download the native HockeyApp app for Mac OS
+* Install it and follow the provided steps there
+
+### Configure TravisCI
+* Check the .travis.yml file
+* Replace iOS-Template with your project name
+* Replace DEVELOPER_NAME with the correct distribution certificate name
+* Change PROFILE_NAME with you Provisioning Profile name
+* Export the following things from the Keychain app to the scripts/travis folder:
+  1. "Apple Worldwide Developer Relations Certification Authority" into scripts/travis/apple.cer
+  2. Your iPhone Distribution certificate into scripts/travis/dist.cer
+  3. Your iPhone Distribution private key into scripts/travis/dist.p12 (choose a password)
+* Use the travis encrypt command to encryp the following variables:
+
+```sh
+travis encrypt "KEY_PASSWORD=YOUR_KEY_PASSWORD" --add
+travis encrypt HOCKEY_APP_ID=super_secret --add
+travis encrypt HOCKEY_APP_TOKEN=super_secret --add
+```
+
+* Copy your mobile provisioning profile to scripts/travis/profile/
 
 ### Rename .xcdatamodeld
 * Rename CoreData/iOS-Template.xcdatamodel
