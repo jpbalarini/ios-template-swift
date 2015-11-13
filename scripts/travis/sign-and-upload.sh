@@ -9,9 +9,10 @@ if [[ "$TRAVIS_BRANCH" != "master" ]]; then
 fi
 
 PROVISIONING_PROFILE="$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_NAME.mobileprovision"
-RELEASE_DATE=`date '+%Y-%m-%d %H:%M:%S'`
+RELEASE_DATE=`date '+%Y-%m-%d %H:%M:%S %z'`
 OUTPUTDIR="/Users/travis/build"
-
+VERSION_NUMBER=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "./scripts/$APPNAME/Info.plist")
+BUILD_NUMBER=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "./scripts/$APPNAME/Info.plist")
 
 echo "********************"
 echo "*     Signing      *"
@@ -28,7 +29,7 @@ echo "${BUILD_DIR_CONTENTS}"
 xcrun -log -sdk iphoneos PackageApplication -v "$OUTPUTDIR/$APPNAME.app" -o "$OUTPUTDIR/$APPNAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE" CODE_SIGN_RESOURCE_RULES_PATH='$(SDKROOT)/ResourceRules.plist'
 
 
-RELEASE_NOTES="Build: $TRAVIS_BUILD_NUMBER\nUploaded: $RELEASE_DATE"
+RELEASE_NOTES="Build: $VERSION_NUMBER ($BUILD_NUMBER) - Uploaded: $RELEASE_DATE"
 
 zip -r -9 "$OUTPUTDIR/$APPNAME.app.dSYM.zip" "$OUTPUTDIR/$APPNAME.app.dSYM"
 

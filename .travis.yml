@@ -17,7 +17,7 @@ before_script:
 after_script:
 - ./scripts/travis/remove-key.sh
 after_success:
-- ./scripts/travis/fabric.sh
+- ./scripts/travis/sign-and-upload.sh
 env:
   global:
   - APPNAME="iOS-Template"
