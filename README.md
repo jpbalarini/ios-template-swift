@@ -4,7 +4,7 @@ iOS Swift template application.
 
 ## Get started
 
-To setup project follow a few simple steps:
+To setup project please follow the next steps:
  1. [Download](#download).
  2. [Rename project](#rename-project).
  3. [Configure mogenerator](#configure-mogenerator).

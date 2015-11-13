@@ -7,7 +7,7 @@ before_install:
 - sudo gem install cocoapods --no-document
 - chmod +x ./scripts/travis/add-key.sh
 - chmod +x ./scripts/travis/remove-key.sh
-- chmod +x ./scripts/travis/fabric.sh
+- chmod +x ./scripts/travis/sign-and-upload.sh
 install:
 - pod install
 script:
