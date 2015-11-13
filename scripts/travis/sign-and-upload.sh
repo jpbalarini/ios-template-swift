@@ -12,8 +12,8 @@ fi
 PROVISIONING_PROFILE="$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_NAME.mobileprovision"
 RELEASE_DATE=`date '+%Y-%m-%d %H:%M:%S %z'`
 OUTPUTDIR="/Users/travis/build"
-VERSION_NUMBER=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "./scripts/$APPNAME/Info.plist")
-BUILD_NUMBER=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "./scripts/$APPNAME/Info.plist")
+VERSION_NUMBER=$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "./$APPNAME/Info.plist")
+BUILD_NUMBER=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" "./$APPNAME/Info.plist")
 
 echo "********************"
 echo "*     Signing      *"

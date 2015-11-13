@@ -10,8 +10,10 @@ To setup project please follow the next steps:
  3. [Configure mogenerator](#configure-mogenerator).
  4. [Configure CocoaPods](#configure-cocoapods).
  5. [Configure Fabric/Crashlytics](#configure-fabric-crashlytics).
- 6. [Edit README.md](#edit-readme-md).
- 7. [Commit and push to repository](#made-initial-commit-and-push-to-remote-repository).
+ 6. [Configure HockeyApp](#configure-hockeyApp).
+ 7. [Configure TravisCI](#configure-travisCI).
+ 8. [Edit README.md](#edit-readme-md).
+ 9. [Commit and push to repository](#made-initial-commit-and-push-to-remote-repository).
 
 ### Clone or download
 
@@ -99,7 +101,7 @@ travis encrypt HOCKEY_APP_ID=super_secret --add
 travis encrypt HOCKEY_APP_TOKEN=super_secret --add
 ```
 
-* Copy your mobile provisioning profile to scripts/travis/profile/
+* Download your provisioning profile from the Apple Developer portal and copy it to scripts/travis/profile/
 
 ### Rename .xcdatamodeld
 * Rename CoreData/iOS-Template.xcdatamodel
