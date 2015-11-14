@@ -36,14 +36,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        if (DEBUG == 1)
 //        {
-//            println("Crashlytics is disabled in DEBUG")
+//            print("Crashlytics is disabled in DEBUG")
 //        }
 //        else
 //        {
 //            Crashlytics.startWithAPIKey(SBKeyAPIKeyCrashlitycs)
 //        }
         
-        BITHockeyManager.sharedHockeyManager().configureWithIdentifier("0fd7fadd769c493f9c48e2ec7b2abade")
+        BITHockeyManager.sharedHockeyManager().configureWithIdentifier(SBKeyAPIKeyHockeyApp)
         // Do some additional configuration if needed here
         BITHockeyManager.sharedHockeyManager().startManager()
         BITHockeyManager.sharedHockeyManager().authenticator.authenticateInstallation()

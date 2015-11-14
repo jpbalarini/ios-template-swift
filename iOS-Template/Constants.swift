@@ -7,6 +7,7 @@ import UIKit
 
 /*----------API keys---------*/
 let SBKeyAPIKeyCrashlitycs  = ""
+let SBKeyAPIKeyHockeyApp    = ""
 let SBKeyAPIKeyGoogle       = ""
 
 /*--------------User Defaults keys-------------*/

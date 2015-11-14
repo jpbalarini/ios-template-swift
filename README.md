@@ -83,6 +83,7 @@ pod install
 ### Configure HockeyApp
 * Download the native HockeyApp app for Mac OS
 * Install it and follow the provided steps there
+* Set the SBKeyAPIKeyHockeyApp key in Constants.swift
 
 ### Configure TravisCI
 * Check the .travis.yml file
@@ -97,8 +98,8 @@ pod install
 
 ```sh
 travis encrypt "KEY_PASSWORD=YOUR_KEY_PASSWORD" --add
-travis encrypt HOCKEY_APP_ID=super_secret --add
-travis encrypt HOCKEY_APP_TOKEN=super_secret --add
+travis encrypt "HOCKEY_APP_ID=super_secret" --add
+travis encrypt "HOCKEY_APP_TOKEN=super_secret" --add
 ```
 
 * Download your provisioning profile from the Apple Developer portal and copy it to scripts/travis/profile/
