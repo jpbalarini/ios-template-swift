@@ -23,7 +23,7 @@ env:
   global:
   - APPNAME="iOS-Template"
   - 'DEVELOPER_NAME="iPhone Distribution: Juan Balarini (5U87XMD88S)"'
-  - PROFILE_NAME="81e6a777-675d-4938-9c04-05615042bb88"
+  - PROFILE_NAME="TestDistributionProfileFS"
 notifications:
   hipchat:
     rooms:
