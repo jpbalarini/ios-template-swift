@@ -5,7 +5,7 @@ This is the first draft of the guide.
 ## Table of Contents
 
 * [Why This Is Required](#why-this-is-required)
-* [Objective-C Coding Conventions](#objective-c-coding-conventions)
+* [Swift Coding Conventions](#swift-coding-conventions)
 * [Project Technical Conventions](#project-technical-conventions)
     * [Xcode](#xcode)
   * [CocoaPods](#cocoapods)

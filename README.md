@@ -120,3 +120,6 @@ git commit -m "Initial commit"
 git remote add origin git@github.com:user/some-git-repository.git
 git push origin master
 ```
+
+### Check that the TravisCI and Hockeyapp integration works
+* Whenever a new push is made to github, a new TravisCI build should start. You should be able to see the status on the TravisCI page. When the build finishes, it should send an IPA to Hockeyapp with the latest version. The build number is atached to the release notes so developers and QAs make sure they are working on the same version.
