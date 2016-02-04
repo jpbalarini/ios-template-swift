@@ -30,13 +30,13 @@ git remote add origin git@github.com:user/some-git-repository.git
 To rename the project you should:
 
 #### Change project name:
-* Run the .rename_project.sh script. Enter the new project name
-* Open the .workspace project
-* In the Project Navigator on the left side, click twice slowly on the project name and it will become editable. Type the new name. A dialog will appear listing all the items Xcode suggests to be renamed.
+* Run the rename_project.sh script. Enter the new project name
+* Open the .xcworkspace project file
+* On the Project Navigator on the left side, click twice slowly on the project name. It will become editable. Type the new name. A dialog will appear listing all the items Xcode suggests to be renamed.
 * Click Rename.
 
 #### Remove mentions in code:
-* Open search tab in the Project Navigator on the left side of Xcode.
+* Open the search tab in the Project Navigator on the left side of Xcode.
 * Search ```iOS-Template``` in project.
 * Replace any occurrence of the iOS-Template name with the new project name.
 
@@ -44,7 +44,7 @@ To rename the project you should:
 * Change bundle id for all schemes in project build settings.
 
 #### Change workspace reference:
-* Right click the project bundle .workspace file and select “Show Package Contents” from the context menu. Open the .xcworkspacedata file with any text editor.
+* Right click the project bundle .xcworkspace file and select “Show Package Contents” from the context menu. Open the .xcworkspacedata file with any text editor.
 * Change the absolute route:
 
 ```
